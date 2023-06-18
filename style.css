@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    direction: rtl;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgb(46, 46, 46);
+    color: aliceblue;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    background-color: rgb(51, 255, 255);
+    color: black;
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+span{
+    color: green;
+}
