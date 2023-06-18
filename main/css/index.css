@@ -522,6 +522,7 @@ body {
     margin: auto;
     margin-top: 1rem;
     width: 95%;
+    overflow: hidden;
 }
 .week-chart-curve1,
 .week-chart-curve2,
