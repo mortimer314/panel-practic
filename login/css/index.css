@@ -1,0 +1,220 @@
+@import "./reset.css";
+@import "./font.css";
+@import "./defaults.css";
+@import "./variables.css";
+
+body {
+    background: var(--bg-body);
+    color: var(--color-body);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card {
+    width: 30rem;
+    height: 60rem;
+    perspective: 2000px;
+}
+
+.card__inner {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transition: all 0;
+}
+
+ .card__inner--rotate {
+    transform: rotateY(-180deg);
+}
+
+.card__side {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+
+}
+
+.card__side--back {
+    transform: rotateY(180deg);
+}
+
+img {
+    width: 100%;
+    height: 250px;
+}
+
+
+/* --------------start login styles----------- */
+
+.login-register {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 2px solid #f2f2f2;
+    border-bottom: 5px solid #2bce56;
+    padding:1.5rem 2rem;
+}
+
+.login {
+    
+}
+
+.login-title {
+    display: block;
+    font-size: 2.2rem;
+}
+
+.login-subtitle {
+    font-size: 1.4rem;
+    color: #e1e1e1;
+    display: block;
+}
+
+.login__new-member {
+    background-color: #f0f2f7;
+    margin: 0.8rem 0;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.login__new-member-text {
+    font-size: 1.4rem;
+    color: #7b868a;
+}
+
+.login__new-member-link {
+    background-color: #a8aaaf;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: var(--white-color);
+    margin-right: 0.7rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.login-form__username, .login-form__password {
+    position: relative;
+}
+
+.login-form__username-input, .login-form__password-input {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    padding: 0.5rem 1.1rem;
+    margin: 0.8rem 0;
+    border-radius: 3px;
+   
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+    font-size: 1.6rem;
+}
+
+input[type=email]{
+    direction: rtl;
+}
+
+.login-form__username-icon, .login-form__password-icon {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 2.2rem;
+    color: #ccc;
+}
+
+.login-form__btn {
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  
+    /* box-shadow: 0 0 1px 1px rgb(224, 224, 224); */
+    background-color: var(--bg-body);
+    color: #2bce56;
+    transition: all 0.4s;
+    position: relative;
+}
+.login-form__btn:hover {
+    background-color: #27293d;
+    /* color: #d0cdcd; */
+}
+
+.login-form__btn-icon {
+    color: var(--white-color);
+    font-size: 1.8rem;
+    position: absolute;
+    right: 3rem;
+}
+
+.login-form__btn-text {
+    color: var(--white-color);
+    margin: 0 auto;
+}
+
+.login-form__password-setting {
+    margin: 1rem 0;
+}
+
+.login-form__password-remember {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login-form__password-checkbox {
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.login-form__password-text, .login-form__password-forget-link {
+    font-size: 1.4rem;
+}
+
+.login-des {
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.login-des-list {
+    color: #cacaca;
+    list-style-type: disc;
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+
+.login-register::before {
+    content: "";
+    position: absolute;
+    top: -5rem;
+    width: 150%;
+    height: 380px;
+    background-color: #2bce56;
+    z-index: -1;
+    transform: rotate(-4deg);
+}
+
+.login-register::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 380px;
+    background-color: rgba(43, 206, 86, 0.6);
+    z-index: -99;
+    transform: rotate(-4deg);
+}
