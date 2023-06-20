@@ -129,6 +129,7 @@ body {
     position: relative;
     right: 26rem;
     width: calc(100% - 26rem);
+    /* min-width: 30rem; */
     transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
@@ -400,7 +401,7 @@ body {
 
 /* start home content styles */
 .home-content {
-
+    min-width: 30rem;
     padding: 0 2.5rem 0 2.5rem;
     overflow: hidden;
 }

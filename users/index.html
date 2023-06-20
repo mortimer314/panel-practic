@@ -149,7 +149,127 @@
                 </div>
                 <div class="home-content ">
                     <div class="row">
-                       
+                        <div class="container-fluid" id="home-content">
+                            <div class="container">
+                                <div class="home-title">
+                                    <span>افزودن کاربر جدید</span>
+                                </div>
+                                <form class="form row g-4">
+                                    <div class="col-md-6 col-12">
+                                        <div class="name input">
+                                            <label class="input-title">نام کاربری</label>
+                                            <input type="text" placeholder="نام کاربری">
+                                            <span class="error-message text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="family input">
+                                            <label class="input-title">نام و نام خانوادگی</label>
+                                            <input type="text" placeholder="نام و نام خانوادگی">
+                                            <span class="error-message text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="email input">
+                                            <label class="input-title">ایمیل</label>
+                                            <input type="email" placeholder="ایمیل">
+                                            <span class="error-message text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="password input">
+                                            <label class="input-title">رمز عبور</label>
+                                            <input type="password" placeholder="رمز عبور">
+                                            <span class="error-message text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="phone input">
+                                            <label class="input-title">شماره تلفن</label>
+                                            <input type="text" placeholder="شماره تلفن">
+                                            <span class="error-message text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="role input">
+                                            <label class="input-title">نقش کاربر </label>
+                                            <select>
+                                                <option value="admin">ادمین</option>
+                                                <option value="user">کاربر عادی</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="bottom-form">
+                                            <div class="submit-btn">
+                                                <input type="submit" value="افزودن">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="container-fluid">
+                            <div class="home-content-users-table">
+                                <div class="container">
+                                    <h1 class="table-title">لیست کاربران</h1>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>شماره</th>
+                                                <th>نام و نام خانوادگی</th>
+                                                <th>نام کاربری</th>
+                                                <th>تلفن</th>
+                                                <th>ایمیل</th>
+                                                <th>نقش</th>
+                                                <th>ویرایش</th>
+                                                <th>حذف</th>
+                                                <th>بن</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Users Data Loaded From JS -->
+                                            <tr>
+                                                <td>شماره</td>
+                                                <td>نام و نام خانوادگی</td>
+                                                <td>یوزرنیم</td>
+                                                <td>شماره</td>
+                                                <td>ایمیل</td>
+                                                <td>نقش</td>
+                                                <td><button class="edit-btn">ویرایش</button></td>
+                                                <td><button class="delete-btn">حذف</button></td>
+                                                <td><button class="ban-btn">بن</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>شماره</td>
+                                                <td>نام و نام خانوادگی</td>
+                                                <td>یوزرنیم</td>
+                                                <td>شماره</td>
+                                                <td>ایمیل</td>
+                                                <td>نقش</td>
+                                                <td><button class="edit-btn">ویرایش</button></td>
+                                                <td><button class="delete-btn">حذف</button></td>
+                                                <td><button class="ban-btn">بن</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>شماره</td>
+                                                <td>نام و نام خانوادگی</td>
+                                                <td>یوزرنیم</td>
+                                                <td>شماره</td>
+                                                <td>ایمیل</td>
+                                                <td>نقش</td>
+                                                <td><button class="edit-btn">ویرایش</button></td>
+                                                <td><button class="delete-btn">حذف</button></td>
+                                                <td><button class="ban-btn">بن</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
