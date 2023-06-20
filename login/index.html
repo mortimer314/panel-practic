@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>login</title>
     <!-- fontawesome icon-->
     <link rel="stylesheet" href="../vendor/FontAwesome5/all.min.css">
 
@@ -33,12 +33,12 @@
 
                         <form action="#" class="login-form">
                             <div class="login-form__username">
-                                <input type="text" class="login-form__username-input" id="identifier"
+                                <input type="text" class="login-form__username-input" id="login-username"
                                     placeholder="نام کاربری یا آدرس ایمیل" />
                                 <i class="fa fa-user login-form__username-icon"></i>
                             </div>
                             <div class="login-form__password">
-                                <input type="password" class="login-form__password-input" id="password"
+                                <input type="password" class="login-form__password-input" id="login-password"
                                     placeholder="رمز عبور" />
                                 <i class="fa fa-lock-open login-form__password-icon"></i>
                             </div>
@@ -93,27 +93,27 @@
 
                         <form action="#" class="login-form">
                             <div class="login-form__username">
-                                <input type="text" class="login-form__username-input" id="name"
+                                <input type="text"  class="login-form__username-input" required id="name"
                                     placeholder="نام و نام خونوادگی" />
                                 <i class="fa fa-user login-form__username-icon"></i>
                             </div>
                             <div class="login-form__username">
-                                <input type="text" class="login-form__username-input" id="username"
+                                <input type="text" required class="login-form__username-input" id="username"
                                     placeholder="نام کاربری" />
-                                <i class="fa fa-user login-form__username-icon"></i>
+                                <i class="fa fa-id-card login-form__username-icon"></i>
                             </div>
                             <div class="login-form__username">
-                                <input type="email" class="login-form__username-input" id="email"
+                                <input type="email" required class="login-form__username-input" id="email"
                                     placeholder=" آدرس ایمیل" />
-                                <i class="fa fa-user login-form__username-icon"></i>
+                                <i class="fa fa-envelope login-form__username-icon"></i>
                             </div>
                             <div class="login-form__username">
-                                <input type="text" class="login-form__username-input" id="phone"
+                                <input type="text" required class="login-form__username-input" id="phone"
                                     placeholder="شماره تماس" />
-                                <i class="fa fa-user login-form__username-icon"></i>
+                                <i class="fa fa-phone-volume login-form__username-icon"></i>
                             </div>
                             <div class="login-form__password">
-                                <input type="password" class="login-form__password-input" id="password2"
+                                <input type="password" required class="login-form__password-input" id="password"
                                     placeholder="رمز عبور" />
                                 <i class="fa fa-lock-open login-form__password-icon"></i>
                             </div>
@@ -151,9 +151,15 @@
         </div>
     </div>
 
-    <!--  -->
+    <!-- FontAwesome5 -->
     <script src="../vendor/FontAwesome5/all.min.js"></script>
-    <!--  -->
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- swal -->
+    <script src="../vendor/sweet-alert/sweetalert1.js"></script>
+
+
+    <!-- <script src="js/shared.js" type="module"></script> -->
     <script src="./js/index.js"></script>
 </body>
 

@@ -6,16 +6,18 @@
 body {
     background: var(--bg-body);
     color: var(--color-body);
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 
 .card {
+    position: absolute;
+    top: 5rem;
     width: 30rem;
-    height: 60rem;
     perspective: 2000px;
 }
 
@@ -27,7 +29,7 @@ body {
     transition: all 0;
 }
 
- .card__inner--rotate {
+.card__inner--rotate {
     transform: rotateY(-180deg);
 }
 
@@ -58,12 +60,10 @@ img {
     border-radius: 1rem;
     border: 2px solid #f2f2f2;
     border-bottom: 5px solid #2bce56;
-    padding:1.5rem 2rem;
+    padding: 1.5rem 2rem;
 }
 
-.login {
-    
-}
+.login {}
 
 .login-title {
     display: block;
@@ -107,26 +107,29 @@ img {
     width: 100%;
 }
 
-.login-form__username, .login-form__password {
+.login-form__username,
+.login-form__password {
     position: relative;
 }
 
-.login-form__username-input, .login-form__password-input {
+.login-form__username-input,
+.login-form__password-input {
     width: 100%;
     border: 1px solid #e6e6e6;
     padding: 0.5rem 1.1rem;
     margin: 0.8rem 0;
     border-radius: 3px;
-   
+
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
     font-size: 1.6rem;
 }
 
-input[type=email]{
+input[type=email] {
     direction: rtl;
 }
 
-.login-form__username-icon, .login-form__password-icon {
+.login-form__username-icon,
+.login-form__password-icon {
     position: absolute;
     top: 1.5rem;
     left: 1.5rem;
@@ -143,13 +146,14 @@ input[type=email]{
     margin-top: 0.8rem;
     font-size: 1.5rem;
     font-weight: bold;
-  
+
     /* box-shadow: 0 0 1px 1px rgb(224, 224, 224); */
     background-color: var(--bg-body);
     color: #2bce56;
     transition: all 0.4s;
     position: relative;
 }
+
 .login-form__btn:hover {
     background-color: #27293d;
     /* color: #d0cdcd; */
@@ -182,7 +186,8 @@ input[type=email]{
     cursor: pointer;
 }
 
-.login-form__password-text, .login-form__password-forget-link {
+.login-form__password-text,
+.login-form__password-forget-link {
     font-size: 1.4rem;
 }
 
@@ -217,4 +222,7 @@ input[type=email]{
     background-color: rgba(43, 206, 86, 0.6);
     z-index: -99;
     transform: rotate(-4deg);
+}
+input:invalid{
+    border: 1px red solid;
 }
