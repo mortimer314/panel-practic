@@ -40,11 +40,11 @@ rotateBtn.forEach(btn => {
 registerBtn.addEventListener("click", (e) => {
     // testInputs()
     let userData = {
-        name:nameInput.value,
-        username:usernameInput.value,
-        email:emailInput.value,
-        phone:phoneInput.value,
-        password:passwordInput.value,
+        name:nameInput.value.trim(),
+        username:usernameInput.value.trim(),
+        email:emailInput.value.trim(),
+        phone:phoneInput.value.trim(),
+        password:passwordInput.value.trim(),
         role:"user"
     }
 
