@@ -2,6 +2,8 @@
 @import "./font.css";
 @import "./defaults.css";
 @import "./variables.css";
+@import "../../css/custom-swal/swal.css";
+
 
 body {
     background: var(--bg-body);
@@ -489,7 +491,9 @@ input[type="submit"]:hover {
     background-color: #3b3c48;
     box-shadow: 1px 1px 1px 1px rgb(11, 11, 11);
 }
-
+/* inputn[type='text']{
+    border-color: red;
+} */
 select {
     border: none;
     outline: none;

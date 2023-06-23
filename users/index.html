@@ -158,51 +158,51 @@
                                     <div class="col-md-6 col-12">
                                         <div class="name input">
                                             <label class="input-title">نام کاربری</label>
-                                            <input id="username" type="text" placeholder="نام کاربری">
+                                            <input id="username" type="text" placeholder="نام کاربری" required>
                                             <span class="error-message text-danger"></span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="family input">
                                             <label class="input-title">نام و نام خانوادگی</label>
-                                            <input id="name" type="text" placeholder="نام و نام خانوادگی">
+                                            <input  id="name" type="text" placeholder="نام و نام خانوادگی" required>
                                             <span class="error-message text-danger"></span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="email input">
                                             <label class="input-title">ایمیل</label>
-                                            <input id="email" type="email" placeholder="ایمیل">
+                                            <input id="email" type="email" placeholder="ایمیل" required>
                                             <span class="error-message text-danger"></span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="password input">
                                             <label class="input-title">رمز عبور</label>
-                                            <input id="password" type="password" placeholder="رمز عبور">
+                                            <input id="password" type="password" placeholder="رمز عبور" required>
                                             <span class="error-message text-danger"></span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="phone input">
                                             <label class="input-title">شماره تلفن</label>
-                                            <input id="phone" type="text" placeholder="شماره تلفن">
+                                            <input id="phone" type="text" placeholder="شماره تلفن" required>
                                             <span class="error-message text-danger"></span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="role input">
                                             <label class="input-title">نقش کاربر </label>
-                                            <select id="role">
-                                                <option value="admin">ادمین</option>
+                                            <select id="role" required>
                                                 <option value="user">کاربر عادی</option>
+                                                <option value="admin">ادمین</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="bottom-form">
                                             <div class="submit-btn">
-                                                <input id="submit-btn" type="submit" value="افزودن">
+                                                <input id="submit-btn" type="submit" value="افزودن" required>
                                             </div>
                                         </div>
                                     </div>
@@ -234,40 +234,7 @@
                                         <tbody>
                                             <!-- Users Data From JS -->
                                             <tr>
-                                                <td>شماره</td>
-                                                <td>نام و نام خانوادگی</td>
-                                                <td>یوزرنیم</td>
-                                                <td>شماره</td>
-                                                <td>ایمیل</td>
-                                                <td>نقش</td>
-                                                <td>رمز</td>
-                                                <td><button class="edit-btn">ویرایش</button></td>
-                                                <td><button class="delete-btn">حذف</button></td>
-                                                <td><button class="ban-btn">بن</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>شماره</td>
-                                                <td>نام و نام خانوادگی</td>
-                                                <td>یوزرنیم</td>
-                                                <td>شماره</td>
-                                                <td>ایمیل</td>
-                                                <td>نقش</td>
-                                                <td>رمز</td>
-                                                <td><button class="edit-btn">ویرایش</button></td>
-                                                <td><button class="delete-btn">حذف</button></td>
-                                                <td><button class="ban-btn">بن</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>شماره</td>
-                                                <td>نام و نام خانوادگی</td>
-                                                <td>یوزرنیم</td>
-                                                <td>شماره</td>
-                                                <td>ایمیل</td>
-                                                <td>نقش</td>
-                                                <td>رمز</td>
-                                                <td><button class="edit-btn">ویرایش</button></td>
-                                                <td><button class="delete-btn">حذف</button></td>
-                                                <td><button class="ban-btn">بن</button></td>
+                                                <td>لطفا کمی منتظر بمانید...</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -295,6 +262,8 @@
     <script src="../vendor/FontAwesome5/all.min.js"></script>
     <!-- chart -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <!-- swal 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- swal -->
     <script src="../vendor/sweet-alert/sweetalert1.js"></script>
     <!-- axios -->

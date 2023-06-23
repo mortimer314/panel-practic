@@ -1,0 +1,13 @@
+.swal-button--confirm{
+    background-color:#2b2b38;
+    transition: all 0.4s ease;
+}
+.swal-title{
+    color: rgb(18, 18, 18);
+}
+.swal2-title{
+    margin-top: 2rem;
+}
+.swal2-select-option{
+  
+}
