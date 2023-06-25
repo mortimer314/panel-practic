@@ -72,4 +72,4 @@ const testInputs = () => {
 
 
 
-export { showSwal ,}
+export { showSwal,testInputs }

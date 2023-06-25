@@ -1,4 +1,4 @@
-
+import { showSwal } from "./shared.js"
 let loginUsernameValue = null
 let loginPasswordValue = null
 
@@ -32,7 +32,14 @@ const getAndSearchInUsers = async () => {
                     console.log(loginUsernameValue == user[1].username && user[1].password == loginPasswordValue)
                     if (loginUsernameValue == user[1].username && user[1].password == loginPasswordValue) {
                         localStorage.setItem("token", user[0])
-                        location.href = "https://mortimer314.github.io/practice/frontend/index.html"
+                        if(user[1].role == "admin"){
+                            location.href = "https://mortimer314.github.io/panel-practic/main/index.html"
+
+                        }else{
+                            location.href = "https://mortimer314.github.io/practice/frontend/index.html"
+                        }
+                    }else{
+                        showSwal("نام کاربری یا رمز عبور اشتباه است!","error","متوجه شدم",()=>{})
                     }
                 })
             } else {
