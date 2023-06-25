@@ -416,7 +416,7 @@ body {
     background: #27293d;
     border-radius: 0.5rem;
     box-shadow: 0 0 1px 1px rgb(44, 44, 44);
-    overflow: auto;
+    /* overflow: auto; */
     
 }
 

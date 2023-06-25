@@ -158,7 +158,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="name input">
                                             <label class="input-title">نام کاربری</label>
-                                            <input id="username" type="text" placeholder="نام کاربری" required>
+                                            <input id="username" type="text"  oninput="setCustomValidity('')" oninvalid="setCustomValidity('')" placeholder="نام کاربری" required>
                                             <span class="error-message text-danger"></span>
                                         </div>
                                     </div>
