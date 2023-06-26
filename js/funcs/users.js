@@ -38,7 +38,7 @@ const creatNewUser = async () => {
                             phoneInput.value = ""
                             passwordInput.value = ""
 
-                            showSwal("کاربر مورد نظر با موفقیت افزوده شدید.", "success", "تایید", getAndShowAllUsers())
+                            showSwal("کاربر مورد نظر با موفقیت افزوده شد.", "success", "تایید", getAndShowAllUsers())
                         })
                         .catch(res => {
 
