@@ -5,7 +5,7 @@ const showSwal = (title, icon, buttons, callback) => {
     title,
     icon,
     buttons,
-  }).then((result) => callback(result));
+  }).then(callback);
 };
 
 const testInputs = () => {

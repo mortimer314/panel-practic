@@ -1,0 +1,9 @@
+@font-face {
+    font-family: IRANSans;
+    src: url(../fonts/IRANSans/IRANSans.ttf);
+}
+
+@font-face {
+    font-family: BoldIRANSans;
+    src: url(../fonts/IRANSans/IRANSans_Bold.ttf);
+}

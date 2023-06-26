@@ -1,0 +1,33 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 10px*/
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+body {
+    line-height: 1.6;
+    font-size: 1.6rem;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    font-family: var(--primary-font);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    outline: none;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 400ms ease;
+}
+
+a:hover {
+    color: #1e83f0;
+    text-decoration: none;
+}
