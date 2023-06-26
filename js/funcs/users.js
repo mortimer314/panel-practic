@@ -1,8 +1,5 @@
 
-import { showSwal, testInputs} from "../shared.js";
-
-
-  
+import { showSwal, testInputs, testRepeatUsername } from "../shared.js";
 
 const creatNewUser = async () => {
 
@@ -13,48 +10,50 @@ const creatNewUser = async () => {
     const passwordInput = document.querySelector("#password")
     const roleInput = document.querySelector("#role")
 
-    let isTestInputsOk = testInputs()
-    console.log(isTestInputsOk)
+    testInputs().then(result => {
 
-    if (isTestInputsOk) {
+        if (result) {
+            testRepeatUsername().then(result => {
 
-        let userData = {
-            name: nameInput.value.trim(),
-            username: usernameInput.value.trim(),
-            email: emailInput.value.trim(),
-            phone: phoneInput.value.trim(),
-            password: passwordInput.value.trim(),
-            role: roleInput.value,
-            ban: false
-        }
+                if (result) {
+                    let userData = {
+                        name: nameInput.value.trim(),
+                        username: usernameInput.value.trim(),
+                        email: emailInput.value.trim(),
+                        phone: phoneInput.value.trim(),
+                        password: passwordInput.value.trim(),
+                        role: 'user',
+                        ban: false
+                    }
 
-        axios({
-            method: "post",
-            url: "https://sabz-practice-default-rtdb.firebaseio.com/users.json",
-            data: JSON.stringify(userData)
-        })
-            .then(res => {
+                    axios({
+                        method: "post",
+                        url: "https://sabz-practice-default-rtdb.firebaseio.com/users.json",
+                        data: JSON.stringify(userData)
+                    })
+                        .then(res => {
+                            nameInput.value = ""
+                            usernameInput.value = ""
+                            emailInput.value = ""
+                            phoneInput.value = ""
+                            passwordInput.value = ""
 
-                showSwal("کاربر مورد نظر با موفقیت افزوده شد", "success", "تایید", () => {
+                            showSwal("کاربر مورد نظر با موفقیت افزوده شدید.", "success", "تایید", getAndShowAllUsers())
+                        })
+                        .catch(res => {
 
-                    nameInput.value = ""
-                    usernameInput.value = ""
-                    emailInput.value = ""
-                    phoneInput.value = ""
-                    passwordInput.value = ""
-                    roleInput.value = "user"
-
-                })
-                getAndShowAllUsers()
-
-            })
-            .catch(res => {
-
-                if (res.message === "Network Error") {
-                    alert("پایگاه داده در فایربیس میباشد برای دور زدن تحریم و وصل شدن لطفا از فیلتر شکن استفاده کنید.باتشکر👌")
+                            if (res.message === "Network Error") {
+                                alert("پایگاه داده در فایربیس میباشد برای دور زدن تحریم و وصل شدن لطفا از فیلتر شکن استفاده کنید.باتشکر👌")
+                            }
+                        })
                 }
             })
-    }
+        }
+
+    })
+    
+
+   
 }
 
 const getAndShowAllUsers = async () => {
