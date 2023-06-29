@@ -1,0 +1,133 @@
+@import "./variables.css";
+@import "./fonts.css";
+@import "./default.css";
+@import "./header.css";
+@import "./footer.css";
+@import "./helper-class.css";
+@import "./course-box.css";
+/* @import "./index.css"; */
+/* @import "./helper-class.css"; */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 1px 1px #ffffff89;
+    background-color: #342541c1;
+}
+
+
+
+/*========================= start main styles ===================*/
+
+.main {
+
+    padding: 3rem 1.5rem;
+}
+
+.main-content {
+    padding: 0 1.5rem;
+}
+
+.main__right,
+.main__left {
+    padding: 1.5rem 0;
+}
+
+/* start blog styles */
+
+.blog__title {
+    padding: 1rem 0;
+}
+
+.blog__content:nth-child(h1, h2, h3) {
+    font-weight: bold;
+    font-size: 110%;
+    margin: 1rem 0;
+}
+
+.blog__content img {
+    margin: auto;
+    display: block;
+}
+
+.blog__content {
+    text-align: justify;
+    padding: 0 1rem;
+
+}
+
+.blog__content p,
+h1 {
+    padding: 2rem 2rem 1rem 3.5rem;
+}
+
+.blog__content h2,
+h3 {
+    padding: 1rem 0;
+}
+
+stronge {
+    font-weight: bold;
+
+
+}
+
+.blog__content a {
+    color: rgb(17, 177, 17);
+}
+
+.blog__content a:hover {
+    color: green;
+}
+
+
+/* start blogs list */
+.main__left{
+    position: relative;
+
+}
+.main__right{}
+.blog-list-wrapper {
+    position: sticky;
+    top:1.5rem;
+  
+   
+}
+
+.blog-list__title {
+    margin-bottom: 2rem;
+}
+
+.blog-list {}
+
+.blog-list__item {
+    box-shadow: 0 0 1px 1px #ffffff89;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    border: 1px solid #000;
+   
+    
+}
+
+.blog-list__link {
+    display: flex;
+  
+}
+
+.blog-list__item-img{
+    max-width: 25%;
+    max-height: 10rem;
+}
+.blog-list__item-body {
+    padding: 1rem;
+}
+
+.blog-list__item-title {
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+.blog-list__item-writer {
+    padding: 0;
+}

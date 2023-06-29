@@ -2,9 +2,12 @@
 @import "./fonts.css";
 @import "./default.css";
 @import "./header.css";
+@import "./footer.css";
 @import "./helper-class.css";
 @import "./course-box.css";
 /* @import "./helper-class.css"; */
+
+/*========================= start header styles ===================*/
 
 .header {
   background-image: linear-gradient(rgba(52, 53, 70, 0.65), rgba(36, 37, 50, 0.1)), url(../images/background-header.jpg);
@@ -28,6 +31,7 @@
 }
 
 
+/*========================= start course styles ===================*/
 
 .courses-header {
   display: flex;
@@ -71,6 +75,7 @@
 }
 
 
+/*========================= start popular styles ===================*/
 
 .popular__header {
   display: flex;
@@ -87,93 +92,8 @@
 }
 
 
-.footer {
-  background-color: var(--primary-bg-color-footer);
-  color: var(--primary-color-footer);
-}
+/*========================= start about us styles ===================*/
 
-.footer__shape {
-  margin-top: auto;
-  height: 150px;
-  justify-self: end;
-  margin-bottom: -0.5rem;
-
-}
-
-.footer__shape svg {
-  margin-top: -1px;
-  fill: var(--primary-bg-color);
-}
-
-.footer__content {
-  padding: 4rem 0;
-  color: var(--primary-color-footer);
-}
-
-.footer-right {
-  display: flex;
-  flex-direction: column;
-
-}
-
-.footer__list {
-  display: flex;
-  gap: 1rem;
-}
-
-.footer__link {
-  color: var(--primary-bg-color);
-  font-weight: bold;
-
-}
-
-.footer__logo {
-  width: 5rem;
-}
-
-.footer__social-media-link {
-  color: var(--primary-bg-color);
-  font-size: 4rem;
-}
-
-.footer__address {
-  margin: 2rem 0;
-}
-
-.footer__contacts,
-.footer__social-media {
-  display: flex;
-  gap: 3rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 2rem 0;
-}
-
-.footer__permissions {}
-
-.footer-permissions-list {
-  text-align: center;
-}
-
-.footer-permissions-img {
-  filter: grayscale(1);
-}
-
-.light .footer-permissions-img {
-  filter: grayscale(0);
-}
-
-.version {
-  background-color: var(--primary-bg-color);
-  color: var(--text-color);
-  height: 2rem;
-  font-size: 1rem;
-  text-align: center;
-  border-top: 1px solid #000;
-}
-
-/* Start About Us Styles */
 
 .about-us {
   margin: 6rem 0;
@@ -217,10 +137,8 @@
 }
 
 
-/* Finish About Us Styles */
+/*========================= start swipers styles ===================*/
 
-
-/* Start Popular Courses Styles */
 .swiper {
   padding: 6rem;
 }
@@ -247,10 +165,8 @@
   position: relative;
 }
 
-/* Finish Popular Courses Styles */
+/*========================= start articles styles ===================*/
 
-
-/* Start Articles Styles */
 
 
 .articles {
@@ -352,4 +268,3 @@
   background-color: var(--primary-color);
 }
 
-/* Finish Articles Styles */
