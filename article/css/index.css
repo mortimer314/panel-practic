@@ -464,6 +464,7 @@ body {
 
 textarea {
     margin-top: 1rem;
+    border-radius: 0.5rem;
 }
 
 .input input {
@@ -520,12 +521,42 @@ select {
     /* display: block; */
 }
 
+
+/*================= start customize ck editor ==============*/
+
 .ck-content {
     color: #000;
 }
-.ck a{
+
+.ck a {
     color: #1da5ff;
+
 }
+
+#container {
+    max-width: 1000px;
+    margin: 20px auto;
+
+}
+
+.ck-editor__editable[role="textbox"] {
+    /* editing area */
+    min-height: 200px;
+}
+
+.ck-content .image {
+    /* block images */
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+
+
+
+
+/*================= finish customize ck editor ==============*/
+
+
 
 /* start users table styles */
 .home-content-users-table {
