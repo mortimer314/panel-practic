@@ -461,20 +461,41 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+.cover-wrapper{
+    padding: 0.5rem;
+    border: 1px solid #fff;
+}
+.cover-img{
+    width: 100%;
+    
+}
 textarea {
     margin-top: 1rem;
     border-radius: 0.5rem;
+    max-height: 12rem;
+    min-height: 12rem;
 }
 
 .input input {
-
     border: none;
     outline: none;
     padding: 0.3rem 1rem;
     margin-top: 1rem;
     border-radius: 0.3rem;
     box-shadow: 0 0 1px 1px black;
+}
+.error-message {
+    display: none;
+    font-size: 1rem;
+    padding: 0.3rem 1.5rem;
+    opacity: 0.95;
+}
+input:required ~span{
+  display: none;
+}
+input:invalid ~span{
+    display: block;
+   
 }
 
 input[type='file'] {

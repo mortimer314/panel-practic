@@ -40,7 +40,7 @@
                                         class="bi bi-graph-up"></i>
                                     <p>داشبورد</p>
                                 </a></li>
-                            <li class="sidebar__item "><a class="sidebar__item-link" href=""><i
+                            <li class="sidebar__item "><a class="sidebar__item-link" href="../users/index.html"><i
                                         class="bi bi-people-fill"></i>
                                     <p>کاربران</p>
                                 </a></li>
@@ -162,15 +162,15 @@
                                     <div class="col-md-6 col-12">
                                         <div class="name input">
                                             <label class="input-title">عنوان مقاله</label>
-                                            <input id="articleTitle" type="text" placeholder="عنوان مقاله" required>
-                                            <span class="error-message text-danger"></span>
+                                            <input id="article-title" type="text" placeholder="عنوان مقاله" required>
+                                            <span class="error-message  text-danger">یک عنوان در نظر بگیرید.</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="family input">
                                             <label class="input-title">نام نویسنده</label>
-                                            <input id="name" type="text" placeholder="نام نویسنده" required>
-                                            <span class="error-message text-danger"></span>
+                                            <input id="write" type="text" placeholder="نام نویسنده" required>
+                                            <span class="error-message text-danger">اگر نویسنده خودتان هستید اجباری نیست.</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
@@ -189,11 +189,16 @@
                                             <input id="file" type="file" required>
                                             <span class="error-message text-danger"></span>
                                         </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="cover-wrapper">
+                                                <img class="cover-img" src="" alt="نمایش کاور">
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="abstract input">
                                             <label class="input-title">چکیده</label>
-                                            <textarea cols="100" rows="4" id="abstract"
+                                            <textarea cols="100" rows="4" height="100" id="abstract"
                                                 placeholder="خلاصه ای حداکثر چهار خطی از مقاله ..." required></textarea>
                                             <span class="error-message text-danger"></span>
                                         </div>
@@ -201,7 +206,7 @@
 
                                     <div class="col-12">
                                         <div class="article-editor">
-                                            <label class="input-title">مقاله</label>
+                                            <label class="input-title">نوشتن مقاله</label>
                                             <div id="container">
                                                 <div id="editor">
                                                 </div>
@@ -262,6 +267,11 @@
 
 
     </div>
+
+
+
+
+
 
     <!--
             The "super-build" of CKEditor 5 served via CDN contains a large set of plugins and multiple editor types.
