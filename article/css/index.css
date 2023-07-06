@@ -265,6 +265,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+ 
+    padding: 0.5rem 0;
 }
 
 .navbar__profile-icon {
@@ -290,10 +292,74 @@ body {
     border-radius: 50%;
 }
 
+.navbar__profile-menu {
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 3px black;
+    color: #000;
+    top: 8rem;
+    left: 2rem;
+    width: 65%;
+    border-radius: 0.3rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
+}
+
+.navbar__profile-wrapper:hover .navbar__profile-menu {
+    opacity: 1;
+    pointer-events: visible;
+    top: 6.5rem;
+
+}
+
+.navbar__profile-item {
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+}
+
+.navbar__notification-wrapper {
+    position: relative;
+    padding: 1.5rem 1.5rem;
+}
+
 .navbar__nootifications {
     display: flex;
-    position: relative;
+  
 }
+
+.navbar__notification-menu {
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 3px black;
+    color: #000;
+    top: 5rem;
+    left: 0rem;
+    border-radius: 0.3rem;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
+}
+
+.navbar__notification-wrapper:hover .navbar__notification-menu {
+    opacity: 1;
+    pointer-events: visible;
+    top: 5rem;
+
+
+}
+
+.navbar__notification-item {
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    white-space: nowrap;
+}
+
 
 .navbar__nootifications-sign {
     width: 0.7rem;
@@ -301,8 +367,7 @@ body {
     border-radius: 50%;
     background-color: rgb(211, 25, 56);
     position: absolute;
-    top: -0.5rem;
-    right: -0.7rem;
+    right: 0.5rem;
 }
 
 .navbar__search {
@@ -342,6 +407,7 @@ body {
     top: 7.5rem;
     position: absolute;
     box-shadow: 0 2px 2px 0 #1e1e2c;
+    z-index: 1;
 }
 
 
@@ -461,14 +527,17 @@ body {
     display: flex;
     flex-direction: column;
 }
-.cover-wrapper{
+
+.cover-wrapper {
     padding: 0.5rem;
     border: 1px solid #fff;
 }
-.cover-img{
+
+.cover-img {
     width: 100%;
-    
+
 }
+
 textarea {
     margin-top: 1rem;
     border-radius: 0.5rem;
@@ -484,18 +553,21 @@ textarea {
     border-radius: 0.3rem;
     box-shadow: 0 0 1px 1px black;
 }
+
 .error-message {
     display: none;
     font-size: 1rem;
     padding: 0.3rem 1.5rem;
     opacity: 0.95;
 }
-input:required ~span{
-  display: none;
+
+input:required~span {
+    display: none;
 }
-input:invalid ~span{
+
+input:invalid~span {
     display: block;
-   
+
 }
 
 input[type='file'] {
