@@ -48,12 +48,10 @@ const login = async () => {
                         } else {
                             location.href = "../frontend/index.html"
                         }
-                    } else {
-                        showSwal("نام کاربری یا رمز عبور اشتباه است!", "error", "متوجه شدم", () => { })
-                    }
+                    } 
                 })
             } else {
-
+                showSwal("نام کاربری یا رمز عبور اشتباه است!", "error", "متوجه شدم", () => { })
             }
         })
         .catch(res => {
