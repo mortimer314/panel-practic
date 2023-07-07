@@ -43,12 +43,18 @@ const login = async () => {
                     if (loginUsernameValue == user[1].username && user[1].password == loginPasswordValue) {
                         localStorage.setItem("token", user[0])
                         if (user[1].role == "admin") {
+                            loginPasswordValue = ''
+                            loginUsernameValue = ''
                             location.href = "../main/index.html"
-
                         } else {
+                            loginPasswordValue = ''
+                            loginUsernameValue = ''
                             location.href = "../frontend/index.html"
                         }
-                    } 
+                    } else{
+                        showSwal("نام کاربری یا رمز عبور اشتباه است!", "error", "متوجه شدم", () => { })
+
+                    }
                 })
             } else {
                 showSwal("نام کاربری یا رمز عبور اشتباه است!", "error", "متوجه شدم", () => { })
