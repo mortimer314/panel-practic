@@ -25,8 +25,9 @@ window.addEventListener("load", () => {
     const mainHeaderLeft = document.querySelector(".main-header__left")
     let token = localStorage.getItem("token")
     getuser(token).then(userInfo => {
-     
+
         if (userInfo) {
+            mainHeaderLeft.innerHTML = ''
             mainHeaderLeft.insertAdjacentHTML("beforeend",
                 `<div class="search-bar d-xl-block">
                     <input type="text" class="search-bar__input" placeholder="جستجو ...">
