@@ -29,7 +29,7 @@ const login = async () => {
 
     await axios({
         method: "get",
-        url: "https://sabz-practice-default-rtdb.firebaseio.com/users.json",
+        url: "https://site-613e5-default-rtdb.firebaseio.com/users.json",
     })
         .then(result => {
             let usersData = result.data
@@ -95,7 +95,7 @@ const register = async () => {
 
                     axios({
                         method: "post",
-                        url: "https://sabz-practice-default-rtdb.firebaseio.com/users.json",
+                        url: "https://site-613e5-default-rtdb.firebaseio.com/users.json",
                         data: JSON.stringify(userData)
                     })
                         .then(async res => {
@@ -107,7 +107,7 @@ const register = async () => {
 
                             let token = res.data.name
                             localStorage.setItem("token", token)
-                            showSwal("کاربر مورد نظر با موفقیت عضو شدید.", "success", "تایید", () => {
+                            showSwal("کاربر گرامی با موفقیت عضو شدید.", "success", "تایید", () => {
                                  location.href = "../../frontend/index.html"
                             })
                         })

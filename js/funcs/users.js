@@ -2,7 +2,7 @@
 import { showSwal, testInputs, testRepeatUsername } from "../shared.js";
 
 const creatNewUser = async () => {
-
+    
     const nameInput = document.querySelector("#name")
     const usernameInput = document.querySelector("#username")
     const emailInput = document.querySelector("#email")
@@ -28,7 +28,7 @@ const creatNewUser = async () => {
 
                     axios({
                         method: "post",
-                        url: "https://sabz-practice-default-rtdb.firebaseio.com/users.json",
+                        url: "https://site-613e5-default-rtdb.firebaseio.com/users.json",
                         data: JSON.stringify(userData)
                     })
                         .then(res => {
@@ -61,7 +61,7 @@ const getAndShowAllUsers = async () => {
 
     const result = await axios({
         method: "get",
-        url: "https://sabz-practice-default-rtdb.firebaseio.com/users.json",
+        url: "https://site-613e5-default-rtdb.firebaseio.com/users.json",
     })
         .catch(res => {
             alert("پایگاه داده در فایربیس میباشد برای دور زدن تحریم و وصل شدن لطفا از فیلتر شکن استفاده کنید.باتشکر👌")
@@ -144,7 +144,7 @@ const editUser = async (userID, userInfo) => {
         }
         await axios({
             method: 'put',
-            url: `https://sabz-practice-default-rtdb.firebaseio.com/users/${userID}.json`,
+            url: `https://site-613e5-default-rtdb.firebaseio.com/users/${userID}.json`,
             data: JSON.stringify(newUserInfos)
         }).then(res => {
             getAndShowAllUsers()
@@ -175,7 +175,7 @@ const deleteUser = (userID) => {
             if (res.isConfirmed) {
                 await axios({
                     method: 'delete',
-                    url: `https://sabz-practice-default-rtdb.firebaseio.com/users/${userID}.json`
+                    url: `https://site-613e5-default-rtdb.firebaseio.com/users/${userID}.json`
                 }).then(res => {
                     getAndShowAllUsers()
                     showSwal("کاربر مورد نظر با موفقیت حذف شد", "success", "تایید", () => { })
@@ -212,7 +212,7 @@ const banUser = (userID, userInfo) => {
                     }
                     await axios({
                         method: 'put',
-                        url: `https://sabz-practice-default-rtdb.firebaseio.com/users/${userID}.json`,
+                        url: `https://site-613e5-default-rtdb.firebaseio.com/users/${userID}.json`,
                         data: JSON.stringify(banUserInfo)
                     }).then(res => {
                         getAndShowAllUsers()
@@ -246,7 +246,7 @@ const banUser = (userID, userInfo) => {
                     }
                     await axios({
                         method: 'put',
-                        url: `https://sabz-practice-default-rtdb.firebaseio.com/users/${userID}.json`,
+                        url: `https://site-613e5-default-rtdb.firebaseio.com/users/${userID}.json`,
                         data: JSON.stringify(banUserInfo)
                     }).then(res => {
                         getAndShowAllUsers()

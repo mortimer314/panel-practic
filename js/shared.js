@@ -79,7 +79,7 @@ const testRepeatUsername = async () => {
     let listInputs = [usernameInput, emailInput, phoneInput,]
     await axios({
         method: "get",
-        url: "https://sabz-practice-default-rtdb.firebaseio.com/users.json",
+        url: "https://site-613e5-default-rtdb.firebaseio.com/users.json",
     })
     .then(result => {
             console.log("testRepeatUsername")

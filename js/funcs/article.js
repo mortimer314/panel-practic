@@ -35,7 +35,7 @@ const createArticle = () => {
 
     axios({
         method: "post",
-        url: "https://sabz-practice-default-rtdb.firebaseio.com/articles.json",
+        url: "https://site-613e5-default-rtdb.firebaseio.com/articles.json",
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
     })
