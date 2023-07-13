@@ -19,6 +19,7 @@
 
 <body>
 
+
     <div id="content">
 
         <div class="body-wrapper">
@@ -35,26 +36,26 @@
                         </div>
                         <hr>
                         <ul class="sidebar__items">
-                            <li class="sidebar__item sidebar__item--active"><a class="sidebar__item-link" href="../main/index.html"><i
+                            <li class="sidebar__item"><a class="sidebar__item-link" href="../main/index.html"><i
                                         class="bi bi-graph-up"></i>
                                     <p>داشبورد</p>
                                 </a></li>
-                                <li class="sidebar__item "><a class="sidebar__item-link" href="../users/index.html"><i
-                                    class="bi bi-people-fill"></i>
-                                <p>کاربران</p>
-                            </a></li>
-                                <li class="sidebar__item "><a class="sidebar__item-link" href="../article/index.html"> <i
-                                    class="fa fa-newspaper"></i>
-                                <p>مقاله ها</p>
-                            </a></li>
-                            <li class="sidebar__item"><a class="sidebar__item-link" href="../courses/index.html"> <i class="bi bi-book"></i>
+                            <li class="sidebar__item "><a class="sidebar__item-link" href="../users/index.html"><i
+                                        class="bi bi-people-fill"></i>
+                                    <p>کاربران</p>
+                                </a></li>
+                            <li class="sidebar__item "><a class="sidebar__item-link"
+                                    href="../article/index.html"> <i class="fa fa-newspaper"></i>
+                                    <p>مقاله ها</p>
+                                </a></li>
+                            <li class="sidebar__item sidebar__item--active"><a class="sidebar__item-link" href="../courses/index.html"> <i class="bi bi-book"></i>
                                     <p>دوره ها</p>
                                 </a></li>
                             <li class="sidebar__item"><a class="sidebar__item-link" href=""> <i class="bi-menu-app"></i>
                                     <p>منو ها</p>
                                 </a></li>
 
-                           <hr>
+                            <hr>
 
                             <li class="sidebar__item"><a class="sidebar__item-link" href=""> <i
                                         class="bi bi-journal-album"></i>
@@ -165,74 +166,118 @@
                 </div>
                 <div class="home-content ">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="performance-chart ">
-                                <div class="performance-chart__header">
-                                    <div class="performance-chart__header-right">
-                                        <p class="performance-chart__text">نمایش داده ها</p>
-                                        <p class="performance-chart__title">بررسی بازدهی</p>
+                        <div class="container-fluid" id="home-content">
+                            <div class="container">
+                                <div class="home-title">
+                                    <span>افزودن دوره جدید</span>
+                                </div>
+                                <form class="form row g-4">
+                                    <div class="col-md-6 col-12">
+                                        <div class="name input">
+                                            <label class="input-title">عنوان دوره</label>
+                                            <input id="article-title" type="text" placeholder="عنوان دوره" required>
+                                            <span class="error-message  text-danger">یک عنوان در نظر بگیرید.</span>
+                                        </div>
                                     </div>
-                                    <div class="performance-chart__header-left">
-                                        <ul class="performance-chart__list">
-                                            <button data-chart="1"
-                                                class="performance-chart__item performance__btn1 performance-chart__item--active">کاربران
-                                                جدید</button>
-                                            <button data-chart="2"
-                                                class="performance-chart__item performance__btn2">فروش</button>
-                                            <button data-chart="3"
-                                                class="performance-chart__item performance__btn3 ">دوره
-                                                ها</button>
-                                        </ul>
+                                    <div class="col-md-6 col-12">
+                                        <div class="family input">
+                                            <label class="input-title">نام استاد</label>
+                                            <input id="write" type="text" placeholder="نام استاد" required>
+                                            <span class="error-message text-danger">اگر استاد خودتان هستید اجباری نیست.</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="performance-chart__content">
-                                    <canvas class="performance-chart-curve"></canvas>
+                                    <div class="col-md-6 col-12">
+                                        <div class="category input">
+                                            <label class="input-title">دسته بندی دوره ها </label>
+                                            <select id="category" required>
+                                                <option value="fronted">فرانت اند</option>
+                                                <option value="backend">بک اند</option>
+                                                <option value="security">امنیت</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="cover input">
+                                            <label class="input-title">کاور</label>
+                                            <input id="file" type="file" required>
+                                            <span class="error-message text-danger"></span>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="cover-wrapper">
+                                                <img class="cover-img" src="" alt="نمایش کاور">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="cover input">
+                                            <label class="input-title">افزودن فیلم</label>
+                                            <input id="file" type="file" required>
+                                            <span class="error-message text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="abstract input">
+                                            <label class="input-title">درباره دوره</label>
+                                            <textarea cols="100" rows="4" height="100" id="abstract"
+                                                placeholder="خلاصه ای حداکثر چهار خطی از دوره ..." required></textarea>
+                                            <span class="error-message text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="article-editor">
+                                            <label class="input-title">معرفی دوره توضیحات</label>
+                                            <div id="container">
+                                                <div id="editor">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="bottom-form">
+                                            <div class="submit-btn">
+                                                <input class="article-btn" id="submit-btn" type="submit" value="انتشار"
+                                                    required>
+                                                <input class="article-btn" id="draft-btn" type="submit" value="پیش نویس"
+                                                    required>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="container-fluid">
+                            <div class="home-content-users-table">
+                                <div class="container p-1">
+                                    <h1 class="table-title">لیست کاربران</h1>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>شماره</th>
+                                                <th>عنوان</th>
+                                                <th>نویسنده</th>
+                                                <th>دسته بندی</th>
+                                                <th>حالت</th>
+                                                <th>زمان انتشار</th>
+                                                <th>ویرایش</th>
+                                                <th>حذف</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Users Data From JS -->
+                                            <tr>
+                                                <td>لطفا کمی منتظر بمانید...</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="week-charts row"> -->
-
-
-                        <div class="col-12 col-lg-4">
-                            <div class="week-chart">
-                                <div class="week-chart__header  ">
-
-                                    <p class="week-chart__text">نمایش داده ها</p>
-                                    <p class="week-chart__title">کاربران جدید</p>
-
-                                </div>
-                                <div class="week-chart__content">
-                                    <canvas class="week-chart-curve1"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="week-chart">
-                                <div class="week-chart__header  ">
-
-                                    <p class="week-chart__text">نمایش داده ها</p>
-                                    <p class="week-chart__title">بررسی بازدهی</p>
-
-                                </div>
-                                <div class="week-chart__content">
-                                    <canvas class="week-chart-curve2"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="week-chart">
-                                <div class="week-chart__header  ">
-
-                                    <p class="week-chart__text">نمایش داده ها</p>
-                                    <p class="week-chart__title">فروش هفته (تومان)</p>
-
-                                </div>
-                                <div class="week-chart__content">
-                                    <canvas class="week-chart-curve3"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- </div> -->
                     </div>
                 </div>
 
@@ -244,20 +289,47 @@
     </div>
 
 
-    </div>
 
-    <!--  -->
+
+
+
+    <!--
+            The "super-build" of CKEditor 5 served via CDN contains a large set of plugins and multiple editor types.
+            See https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start.html#running-a-full-featured-editor-from-cdn
+        -->
+
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/38.1.0/super-build/ckeditor.js"></script> -->
+
+    <!-- local ckeditor5 -->
+    <script src="./vendor/ckeditor5.js"></script>
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-    <!--  -->
+    <!-- FontAwesome5 -->
     <script src="../vendor/FontAwesome5/all.min.js"></script>
+
+    <!-- swal 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- swal -->
+    <script src="../vendor/sweet-alert/sweetalert1.js"></script>
+
+    <!-- axios -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <!-- local axios -->
+    <script src="../vendor/axios/axios.js"></script>
+
     <!--  -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./vendor/classic-ckeditor.js"></script>
+
     <!--  -->
     <script src="./js/panel-shared.js"></script>
+
     <!--  -->
     <script src="js/index.js"></script>
+    
+    <!--  -->
+    <script type="module" src="../js/article.js"></script>
 </body>
 
 </html>
